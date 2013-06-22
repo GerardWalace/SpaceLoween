@@ -1,0 +1,45 @@
+﻿<?xml version="1.0"?>
+<ArrayOfSpItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpItem>
+    <Name>Soleil</Name>
+    <!--Mass 1.9891×10^30 kg-->
+    <M>1.9891E+30</M>
+    <P />
+    <S />
+    <A />
+    <Forces>
+	    <SpForce>
+        <F>0</F>
+		    <X>0</X>
+		    <Y>0</Y>
+		    <Z>0</Z>
+	    </SpForce>
+	  </Forces>
+  </SpItem>
+  <SpItem>
+    <Name>Terre</Name>
+    <!--Mass 5.9736×10^24 kg-->
+    <M>5.9736E+24</M>
+    <!--Semi-major axis	149,598,261 km-->
+    <P>
+      <X>1.49598261E+8</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </P>
+    <!--Average orbital speed	29.78 km/s-->
+    <S>
+      <X>0</X>
+      <Y>2.978E+1</Y>
+      <Z>0</Z>
+    </S>
+    <A />
+    <Forces>
+      <SpForce>
+        <F>0</F>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </SpForce>
+    </Forces>
+  </SpItem>
+</ArrayOfSpItem>
