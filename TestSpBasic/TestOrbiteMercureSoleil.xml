@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<ArrayOfSpItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpItem>
+    <Name>Soleil</Name>
+    <!--Mass 1.9891×10^30 kg-->
+    <M>1.9891E+30</M>
+    <P>
+      <X>0</X>
+      <Y>60.32</Y>
+      <Z>0</Z>
+    </P>
+    <S>
+      <X>0.000000034204759633981695</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </S>
+    <A />
+    <Forces>
+	    <SpForce>
+        <F>0</F>
+		    <X>0</X>
+		    <Y>0</Y>
+		    <Z>0</Z>
+	    </SpForce>
+	  </Forces>
+  </SpItem>
+  <SpItem>
+    <Name>Mercure</Name>
+    <!--Mass 3.30×10^23 kg-->
+    <M>3.30E+23</M>
+    <!--Semi-major axis	57,909,176 km-->
+    <P>
+      <X>5.7909176E+7</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </P>
+    <!--Average orbital speed	47.87 km/s-->
+    <S>
+      <X>0</X>
+      <Y>4.787E+1</Y>
+      <Z>0</Z>
+    </S>
+    <A />
+    <Forces>
+      <SpForce>
+        <F>0</F>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </SpForce>
+    </Forces>
+  </SpItem>
+</ArrayOfSpItem>
