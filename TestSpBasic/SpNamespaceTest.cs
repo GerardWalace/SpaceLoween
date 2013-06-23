@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SpaceTest;
 using System.IO;
 using System.Reflection;
+using SpaceTest.SpFrwk;
+using SpaceTest.SpFrwk.Tools;
 
 namespace TestSpBasic
 {
