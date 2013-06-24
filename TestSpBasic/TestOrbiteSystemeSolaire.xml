@@ -1,0 +1,112 @@
+﻿<?xml version="1.0"?>
+<ArrayOfSpItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpItem>
+    <Name>Soleil</Name>
+    <!--Mass 1.9891×10^30 kg-->
+    <M>1.9891E+30</M>
+  </SpItem>
+  <SpItem>
+    <Name>Mercure</Name>
+    <!--Mass 3.30×10^23 kg-->
+    <M>3.30E+23</M>
+    <!--Semi-major axis	57,909,176 km-->
+    <P>
+      <X>5.7909176E+7</X>
+    </P>
+    <!--Average orbital speed	47.87 km/s-->
+    <S>
+      <Y>4.787E+1</Y>
+    </S>
+  </SpItem>
+  <SpItem>
+    <Name>Venus</Name>
+    <!--Mass 4,8685×1024 kg-->
+    <M>4.8685E+24</M>
+    <!--Semi-major axis	108 208 930 km-->
+    <P>
+      <X>1.08208930E+8</X>
+    </P>
+    <!--Average orbital speed	35,02 km/s-->
+    <S>
+      <Y>3.502E+1</Y>
+    </S>
+  </SpItem>
+  <SpItem>
+    <Name>Terre</Name>
+    <!--Mass 5,9736×1024 kg-->
+    <M>5.9736E+24</M>
+    <!--Semi-major axis	149 597 887,5 km-->
+    <P>
+      <X>1.495978875E+8</X>
+    </P>
+    <!--Average orbital speed	29,783 km/s-->
+    <S>
+      <Y>2.9783E+1</Y>
+    </S>
+  </SpItem>
+  <SpItem>
+    <Name>Mars</Name>
+    <!--Mass 641,85×1021 kg-->
+    <M>6.4185E+23</M>
+    <!--Semi-major axis	227 936 637 km-->
+    <P>
+      <X>2.27936637E+8</X>
+    </P>
+    <!--Average orbital speed	24,077 km/s-->
+    <S>
+      <Y>2.4077E+1</Y>
+    </S>
+  </SpItem>
+  <SpItem>
+    <Name>Jupiter</Name>
+    <!--Mass 1,8986×1027 kg-->
+    <M>1.8986E+27</M>
+    <!--Semi-major axis	778 412 027 km-->
+    <P>
+      <X>7.78412027E+8</X>
+    </P>
+    <!--Average orbital speed	13,0572 km/s-->
+    <S>
+      <Y>1.30572E+1</Y>
+    </S>
+  </SpItem>
+  <SpItem>
+    <Name>Saturne</Name>
+    <!--Mass 568,46×1024 kg-->
+    <M>5.6846E+26</M>
+    <!--Semi-major axis	1 421 179 772 km-->
+    <P>
+      <X>1.421179772E+9</X>
+    </P>
+    <!--Average orbital speed	9,6446 km/s-->
+    <S>
+      <Y>9.6446E+0</Y>
+    </S>
+  </SpItem>
+  <SpItem>
+    <Name>Uranus</Name>
+    <!--Mass 86,810×1024 kg-->
+    <M>8.6810E+25</M>
+    <!--Semi-major axis	2 876 679 082 km-->
+    <P>
+      <X>2.876679082E+9</X>
+    </P>
+    <!--Average orbital speed	6,81 km/s-->
+    <S>
+      <Y>6.81E+0</Y>
+    </S>
+  </SpItem>
+  <SpItem>
+    <Name>Neptune</Name>
+    <!--Mass 102,43×1024 kg-->
+    <M>1.0243E+26</M>
+    <!--Semi-major axis	4 503 443 661 km-->
+    <P>
+      <X>4.503443661E+9</X>
+    </P>
+    <!--Average orbital speed	5,4317 km/s-->
+    <S>
+      <Y>5.4317E+0</Y>
+    </S>
+  </SpItem>
+</ArrayOfSpItem>

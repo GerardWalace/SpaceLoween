@@ -56,6 +56,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestOrbiteSystemeSolaire.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestOrbiteMercureSoleil.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -163,5 +163,113 @@ namespace TestSpBasic
             Assert.IsTrue(initialPosition.AlmostRatio(mercure.P - soleil.P) < ratioCibleApproxFinal, "Le systeme n'est pas revenue a une position stable");
             Assert.IsTrue(initialVitesse.AlmostRatio(mercure.S - soleil.S) < ratioCibleApproxFinal, "Le systeme n'est pas revenue a une vitesse stable");
         }
+
+        #region TestTropLourd
+        //[TestMethod]
+        //public void TestOrbiteSystemeSolaire()
+        //{
+        //    String filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+        //        "TestOrbiteSystemeSolaire.xml");
+
+
+        //    List<SpItem> objsInitials;
+        //    using (Stream stream = File.Open(filePath, FileMode.Open))
+        //    {
+        //        var xmlformatter = new SpaceSerializer<List<SpItem>>();
+        //        objsInitials = xmlformatter.Deserialize(stream);
+        //    } 
+        //    List<SpItem> objsMouvants;
+        //    using (Stream stream = File.Open(filePath, FileMode.Open))
+        //    {
+        //        var xmlformatter = new SpaceSerializer<List<SpItem>>();
+        //        objsMouvants = xmlformatter.Deserialize(stream);
+        //    }
+
+        //    Double ratioCibleApprox = 0.00002;
+
+        //    Double periodeRevolutionMercure = 87.96934 /*jours*/ * 24 * 3600;
+        //    Double periodeRevolutionVenus = 224.701 /*jours*/ * 24 * 3600;
+        //    Double periodeRevolutionTerre = 365.25696 /*jours*/ * 24 * 3600;
+        //    Double periodeRevolutionMars = 686.9601 /*jours*/ * 24 * 3600;
+        //    Double periodeRevolutionJupiter = 4335.3545 /*jours*/ * 24 * 3600;
+        //    Double periodeRevolutionSaturne = 10757.7365 /*jours*/ * 24 * 3600;
+        //    Double periodeRevolutionUranus = 30799.095 /*jours*/ * 24 * 3600;
+        //    Double periodeRevolutionNeptune = 60224.9036 /*jours*/ * 24 * 3600;
+
+        //    // On met le Soleil et Mercure dans un univers
+        //    SpUnivers univers = new SpUnivers();
+        //    foreach (var obj in objsMouvants)
+        //    {
+        //        univers.AddItem(obj);
+        //    }
+
+        //    SpItem planeteInitiale = null;
+        //    SpItem planeteMouvante = null;
+        //    int i = 0;
+        //    // On fait tourner un peu
+        //    for (; i < periodeRevolutionMercure; i++)
+        //        univers.Run();
+        //    // Puis onverifie que Mercure est revenue a son point de depart
+        //    planeteInitiale = objsInitials.First(p => p.Name == "Mercure");
+        //    planeteMouvante = objsMouvants.First(p => p.Name == "Mercure");
+        //    Assert.IsTrue(planeteInitiale.P.AlmostEquals(planeteMouvante.P, planeteInitiale.P * ratioCibleApprox), "Mercure n'est pas revenu a son point de depart");
+            
+        //    // On fait tourner un peu
+        //    for (; i < periodeRevolutionVenus; i++)
+        //        univers.Run();
+        //    // Puis onverifie que Venus est revenue a son point de depart
+        //    planeteInitiale = objsInitials.First(p => p.Name == "Venus");
+        //    planeteMouvante = objsMouvants.First(p => p.Name == "Venus");
+        //    Assert.IsTrue(planeteInitiale.P.AlmostEquals(planeteMouvante.P, planeteInitiale.P * ratioCibleApprox), "Venus n'est pas revenu a son point de depart");
+
+        //    // On fait tourner un peu
+        //    for (; i < periodeRevolutionTerre; i++)
+        //        univers.Run();
+        //    // Puis onverifie que Terre est revenue a son point de depart
+        //    planeteInitiale = objsInitials.First(p => p.Name == "Terre");
+        //    planeteMouvante = objsMouvants.First(p => p.Name == "Terre");
+        //    Assert.IsTrue(planeteInitiale.P.AlmostEquals(planeteMouvante.P, planeteInitiale.P * ratioCibleApprox), "Terre n'est pas revenu a son point de depart");
+
+        //    // On fait tourner un peu
+        //    for (; i < periodeRevolutionMars; i++)
+        //        univers.Run();
+        //    // Puis onverifie que Mars est revenue a son point de depart
+        //    planeteInitiale = objsInitials.First(p => p.Name == "Mars");
+        //    planeteMouvante = objsMouvants.First(p => p.Name == "Mars");
+        //    Assert.IsTrue(planeteInitiale.P.AlmostEquals(planeteMouvante.P, planeteInitiale.P * ratioCibleApprox), "Mars n'est pas revenu a son point de depart");
+
+        //    // On fait tourner un peu
+        //    for (; i < periodeRevolutionJupiter; i++)
+        //        univers.Run();
+        //    // Puis onverifie que Jupiter est revenue a son point de depart
+        //    planeteInitiale = objsInitials.First(p => p.Name == "Jupiter");
+        //    planeteMouvante = objsMouvants.First(p => p.Name == "Jupiter");
+        //    Assert.IsTrue(planeteInitiale.P.AlmostEquals(planeteMouvante.P, planeteInitiale.P * ratioCibleApprox), "Jupiter n'est pas revenu a son point de depart");
+
+        //    // On fait tourner un peu
+        //    for (; i < periodeRevolutionSaturne; i++)
+        //        univers.Run();
+        //    // Puis onverifie que Saturne est revenue a son point de depart
+        //    planeteInitiale = objsInitials.First(p => p.Name == "Saturne");
+        //    planeteMouvante = objsMouvants.First(p => p.Name == "Saturne");
+        //    Assert.IsTrue(planeteInitiale.P.AlmostEquals(planeteMouvante.P, planeteInitiale.P * ratioCibleApprox), "Saturne n'est pas revenu a son point de depart");
+
+        //    // On fait tourner un peu
+        //    for (; i < periodeRevolutionUranus; i++)
+        //        univers.Run();
+        //    // Puis onverifie que Uranus est revenue a son point de depart
+        //    planeteInitiale = objsInitials.First(p => p.Name == "Uranus");
+        //    planeteMouvante = objsMouvants.First(p => p.Name == "Uranus");
+        //    Assert.IsTrue(planeteInitiale.P.AlmostEquals(planeteMouvante.P, planeteInitiale.P * ratioCibleApprox), "Uranus n'est pas revenu a son point de depart");
+
+        //    // On fait tourner un peu
+        //    for (; i < periodeRevolutionNeptune; i++)
+        //        univers.Run();
+        //    // Puis onverifie que Neptune est revenue a son point de depart
+        //    planeteInitiale = objsInitials.First(p => p.Name == "Neptune");
+        //    planeteMouvante = objsMouvants.First(p => p.Name == "Neptune");
+        //    Assert.IsTrue(planeteInitiale.P.AlmostEquals(planeteMouvante.P, planeteInitiale.P * ratioCibleApprox), "Neptune n'est pas revenu a son point de depart");
+        //}
+        #endregion //TestTropLourd
     }
 }
