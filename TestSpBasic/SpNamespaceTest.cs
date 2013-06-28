@@ -271,5 +271,53 @@ namespace TestSpBasic
         //    Assert.IsTrue(planeteInitiale.P.AlmostEquals(planeteMouvante.P, planeteInitiale.P * ratioCibleApprox), "Neptune n'est pas revenu a son point de depart");
         //}
         #endregion //TestTropLourd
+
+        [TestMethod]
+        public void TestDeuxCorpsRapides()
+        {
+            String filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+                "TestDeuxCorpsRapides.xml");
+            
+            List<SpItem> objsInitiaux;
+            using (Stream stream = File.Open(filePath, FileMode.Open))
+            {
+                var xmlformatter = new SpaceSerializer<List<SpItem>>();
+                objsInitiaux = xmlformatter.Deserialize(stream);
+            }
+            List<SpItem> objsMouvants;
+            using (Stream stream = File.Open(filePath, FileMode.Open))
+            {
+                var xmlformatter = new SpaceSerializer<List<SpItem>>();
+                objsMouvants = xmlformatter.Deserialize(stream);
+            }
+
+            SpItem CorpLourd = objsMouvants.FirstOrDefault(i => i.Name == "CorpLourd");
+            SpItem CorpRapide = objsMouvants.FirstOrDefault(i => i.Name == "CorpRapide");
+            SpItem CorpRapideInitial = objsInitiaux.FirstOrDefault(i => i.Name == "CorpRapide");
+
+            Assert.IsNotNull(CorpLourd, "CorpLourd item is missing from input file");
+            Assert.IsNotNull(CorpRapide, "CorpRapide item is missing from input file");
+
+            Double ratioCibleApprox = 0.00002;
+            Double ratioMax = 2;
+            Double periodeMax = 30 * 24 * 60 * 60 /*tours*/;
+
+            // On met les deux corps dans un univers
+            SpUnivers univers = new SpUnivers();
+            univers.AddItem(CorpLourd);
+            univers.AddItem(CorpRapide);
+            // On fait tourner pendant 1 tours
+            univers.Run();
+            // On verifie que le CorpRapide bouge
+            Assert.IsTrue(CorpRapide.S.Length2 > 0, "CorpRapide ne bouge pas");
+            Assert.IsTrue(CorpRapideInitial.P != CorpRapide.P, "CorpRapide ne bouge pas");
+            // On fait tourner pendant X tours
+            for (int i = 0; i < periodeMax; i++)
+            {
+                univers.Run();
+                // On verifie que le CorpRapide ne s'eloigne pas trop
+                Assert.IsTrue(CorpRapide.P.Length2 < (ratioMax * CorpRapideInitial.P).Length2, "CorpRapide est parti a l'ouest");
+            }
+        }
     }
 }
