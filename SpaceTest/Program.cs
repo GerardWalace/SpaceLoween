@@ -27,7 +27,7 @@ namespace SpaceTest
             copy as SpObject) { }
 
         public SpItem()
-            : this(null) { }
+            : this(null as SpItem) { }
 
         #endregion //Constructors
 
@@ -153,6 +153,7 @@ namespace SpaceTest
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("hello mono !");
         }
     }
 }
