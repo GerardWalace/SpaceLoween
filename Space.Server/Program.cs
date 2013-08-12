@@ -7,13 +7,22 @@ namespace Space.Server
     {
         static void Main(string[] args)
         {
-            using (ServiceHost host = new ServiceHost(typeof(SpaceServer)))
+            Console.WriteLine("Hello Pi !");
+
+            try
             {
-                host.Open();
-                Console.WriteLine("Server Started");
-                Console.WriteLine("Press 'Enter' to stop");
-                Console.ReadLine();
-                host.Close();
+                using (ServiceHost host = new ServiceHost(typeof(SpaceServer)))
+                {
+                    host.Open();
+                    Console.WriteLine("Server Started");
+                    Console.WriteLine("Press 'Enter' to stop");
+                    Console.ReadLine();
+                    host.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
         }
     }

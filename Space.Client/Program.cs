@@ -10,11 +10,18 @@ namespace Space.Client
         {
             Console.WriteLine("Welcome to Space.Client");
 
-            using (ChannelFactory<ISpaceServer> spaceFactory = new ChannelFactory<ISpaceServer>("Space.Client"))
+            try
             {
-                ISpaceServer serverProxy = spaceFactory.CreateChannel();
-                string test = serverProxy.TestConnection("Client");
-                Console.WriteLine(test);
+                using (ChannelFactory<ISpaceServer> spaceFactory = new ChannelFactory<ISpaceServer>("Space.Client"))
+                {
+                    ISpaceServer serverProxy = spaceFactory.CreateChannel();
+                    string test = serverProxy.TestConnection("Client");
+                    Console.WriteLine(test);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
         }
     }
